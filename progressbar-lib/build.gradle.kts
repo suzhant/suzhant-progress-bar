@@ -1,6 +1,11 @@
+import com.android.build.gradle.tasks.getPrefabFromMaven
+import com.android.sdklib.computeFullReleaseName
+import com.android.sdklib.computeReleaseNameAndDetails
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -40,4 +45,17 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+}
+
+afterEvaluate {
+    publishing{
+        publications {
+            register<MavenPublication>("release"){
+                from(components["release"])
+                groupId = "com.github.suzhant"
+                artifactId = "progressbar-lib"
+                version = "1.0"
+            }
+        }
+    }
 }
