@@ -43,14 +43,15 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-afterEvaluate {
-    publishing{
-        publications {
-            register<MavenPublication>("release"){
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.suzhant"
+            artifactId = "progressbar-lib"
+            version = "1.0"
+
+            afterEvaluate {
                 from(components["release"])
-                groupId = "com.github.suzhant"
-                artifactId = "progressbar-lib"
-                version = "1.0"
             }
         }
     }
