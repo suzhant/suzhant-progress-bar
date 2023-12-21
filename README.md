@@ -18,7 +18,7 @@ Step 2: Add the dependency
 
 ```kotlin
 dependencies {
-     implementation 'com.github.suzhant:suzhant-progress-bar:v1.0.0'
+     implementation 'com.github.suzhant:suzhant-progress-bar:v1.0.4'
 }
 ```
 
