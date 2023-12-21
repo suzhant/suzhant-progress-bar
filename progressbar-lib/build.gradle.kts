@@ -1,7 +1,3 @@
-import com.android.build.gradle.tasks.getPrefabFromMaven
-import com.android.sdklib.computeFullReleaseName
-import com.android.sdklib.computeReleaseNameAndDetails
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
