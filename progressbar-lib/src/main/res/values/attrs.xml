@@ -1,0 +1,13 @@
+<resources>
+    <declare-styleable name="CircularProgressBar">
+        <attr name="progress" format="integer" />
+        <attr name="progressTint" format="color"/>
+        <attr name="maxProgress" format="integer"/>
+        <attr name="circleWidthTint" format="color"/>
+        <attr name="circleWidth" format="float"/>
+        <attr name="progressDirection" format="enum">
+            <enum name="clock_wise" value="0"/>
+            <enum name="anti_clock" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
